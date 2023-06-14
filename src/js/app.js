@@ -1,0 +1,104 @@
+const { createApp } = Vue;
+
+createApp({
+  data() {
+    return {
+      teams: [
+        {
+          name: 'Blades',
+          odds: 35,
+        },
+        {
+          name: 'Renard',
+          odds: 30,
+        },
+        {
+          name: 'Kyle',
+          odds: 20,
+        },
+        {
+          name: 'fsi',
+          odds: 10,
+        },
+        {
+          name: 'Jaycer',
+          odds: 5,
+        }
+      ],
+      winning_number: undefined,
+      winning_team: undefined
+    }
+  },
+  methods: {
+    // Create function to generate a random number between 1 and 100 (including the numbers 1 and 100) rounded to the nearest whole number
+    generateRandomNumber() {
+      // Make sure teams array is set to the correct starting order
+      this.teams = [
+        {
+          name: 'Blades',
+          odds: 35,
+        },
+        {
+          name: 'Renard',
+          odds: 30,
+        },
+        {
+          name: 'Kyle',
+          odds: 20,
+        },
+        {
+          name: 'fsi',
+          odds: 10,
+        },
+        {
+          name: 'Jaycer',
+          odds: 5,
+        }
+      ]
+      // Generate the random number between 1 and 100
+      this.winning_number = Math.round(Math.random() * 100) + 1;
+
+      // If the random number is 101, set it to 100
+      if (this.winning_number == 101) {
+        this.winning_number = 100;
+      }
+      console.log(this.winning_number);
+
+      // Check who won the draft lottery
+      if (this.winning_number >= 1 && this.winning_number <= 35) {
+        console.log('Blades wins!');
+        this.winning_team = 'Blades';
+      }
+      else if (this.winning_number >= 36 && this.winning_number <= 65) {
+        console.log('Renard wins!');
+        this.winning_team = 'Renard';
+      }
+      else if (this.winning_number >= 66 && this.winning_number <= 85) {
+        console.log('Kyle wins!');
+        this.winning_team = 'Kyle';
+      }
+      else if (this.winning_number >= 86 && this.winning_number <= 95) {
+        console.log('fsi wins!');
+        this.winning_team = 'fsi';
+      }
+      else if (this.winning_number >= 96 && this.winning_number <= 100) {
+        console.log('Jaycer wins!');
+        this.winning_team = 'Jaycer';
+      }
+
+      // Reorder the teams array based on the draft lottery results
+      const winning_team_index = this.teams.findIndex(team => team.name === this.winning_team);
+
+      if (winning_team_index > -1) {
+        const winningTeamObj = this.teams.splice(winning_team_index, 1)[0];
+        this.teams.unshift(winningTeamObj);
+      }
+
+      console.log(this.teams);
+    },
+    removeBlackBackground(team) {
+      const current_team = document.getElementById(team);
+      current_team.classList.remove('black-background');
+    }
+  }
+}).mount('#app');
