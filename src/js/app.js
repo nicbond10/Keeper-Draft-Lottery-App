@@ -56,12 +56,7 @@ createApp({
         }
       ]
       // Generate the random number between 1 and 100
-      this.winning_number = Math.round(Math.random() * 100) + 1;
-
-      // If the random number is 101, set it to 100
-      if (this.winning_number == 101) {
-        this.winning_number = 100;
-      }
+      this.winning_number = Math.floor(Math.random() * 100) + 1;
       console.log(this.winning_number);
 
       // Check who won the draft lottery
