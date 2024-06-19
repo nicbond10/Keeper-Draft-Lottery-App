@@ -5,7 +5,7 @@ createApp({
     return {
       teams: [
         {
-          name: 'Blades',
+          name: 'EviL',
           odds: 35,
         },
         {
@@ -13,15 +13,15 @@ createApp({
           odds: 30,
         },
         {
-          name: 'Kyle',
+          name: 'fsi',
           odds: 20,
         },
         {
-          name: 'fsi',
+          name: 'Seb',
           odds: 10,
         },
         {
-          name: 'Jaycer',
+          name: 'Panther',
           odds: 5,
         }
       ],
@@ -35,7 +35,7 @@ createApp({
       // Make sure teams array is set to the correct starting order
       this.teams = [
         {
-          name: 'Blades',
+          name: 'EviL',
           odds: 35,
         },
         {
@@ -43,15 +43,15 @@ createApp({
           odds: 30,
         },
         {
-          name: 'Kyle',
+          name: 'fsi',
           odds: 20,
         },
         {
-          name: 'fsi',
+          name: 'Seb',
           odds: 10,
         },
         {
-          name: 'Jaycer',
+          name: 'Panther',
           odds: 5,
         }
       ]
