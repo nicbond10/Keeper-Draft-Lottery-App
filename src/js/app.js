@@ -61,24 +61,24 @@ createApp({
 
       // Check who won the draft lottery
       if (this.winning_number >= 1 && this.winning_number <= 35) {
-        console.log('Blades wins!');
-        this.winning_team = 'Blades';
+        console.log('EviL wins!');
+        this.winning_team = 'EviL';
       }
       else if (this.winning_number >= 36 && this.winning_number <= 65) {
         console.log('Renard wins!');
         this.winning_team = 'Renard';
       }
       else if (this.winning_number >= 66 && this.winning_number <= 85) {
-        console.log('Kyle wins!');
-        this.winning_team = 'Kyle';
-      }
-      else if (this.winning_number >= 86 && this.winning_number <= 95) {
         console.log('fsi wins!');
         this.winning_team = 'fsi';
       }
+      else if (this.winning_number >= 86 && this.winning_number <= 95) {
+        console.log('Seb wins!');
+        this.winning_team = 'Seb';
+      }
       else if (this.winning_number >= 96 && this.winning_number <= 100) {
-        console.log('Jaycer wins!');
-        this.winning_team = 'Jaycer';
+        console.log('Panther wins!');
+        this.winning_team = 'Panther';
       }
 
       // Reorder the teams array based on the draft lottery results
