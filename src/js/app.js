@@ -6,24 +6,20 @@ createApp({
       teams: [
         {
           name: 'EviL',
-          odds: 35,
+          odds: 40,
         },
         {
           name: 'Renard',
           odds: 30,
         },
         {
-          name: 'fsi',
+          name: 'Durk',
           odds: 20,
         },
         {
-          name: 'Seb',
+          name: 'Jak',
           odds: 10,
         },
-        {
-          name: 'Panther',
-          odds: 5,
-        }
       ],
       winning_number: undefined,
       winning_team: undefined
@@ -43,42 +39,34 @@ createApp({
           odds: 30,
         },
         {
-          name: 'fsi',
+          name: 'Durk',
           odds: 20,
         },
         {
-          name: 'Seb',
+          name: 'Jak',
           odds: 10,
         },
-        {
-          name: 'Panther',
-          odds: 5,
-        }
       ]
       // Generate the random number between 1 and 100
       this.winning_number = Math.floor(Math.random() * 100) + 1;
       console.log(this.winning_number);
 
       // Check who won the draft lottery
-      if (this.winning_number >= 1 && this.winning_number <= 35) {
+      if (this.winning_number >= 1 && this.winning_number <= 40) {
         console.log('EviL wins!');
         this.winning_team = 'EviL';
       }
-      else if (this.winning_number >= 36 && this.winning_number <= 65) {
+      else if (this.winning_number >= 41 && this.winning_number <= 70) {
         console.log('Renard wins!');
         this.winning_team = 'Renard';
       }
-      else if (this.winning_number >= 66 && this.winning_number <= 85) {
-        console.log('fsi wins!');
-        this.winning_team = 'fsi';
+      else if (this.winning_number >= 71 && this.winning_number <= 90) {
+        console.log('Durk wins!');
+        this.winning_team = 'Durk';
       }
-      else if (this.winning_number >= 86 && this.winning_number <= 95) {
-        console.log('Seb wins!');
-        this.winning_team = 'Seb';
-      }
-      else if (this.winning_number >= 96 && this.winning_number <= 100) {
-        console.log('Panther wins!');
-        this.winning_team = 'Panther';
+      else if (this.winning_number >= 91 && this.winning_number <= 100) {
+        console.log('Jak wins!');
+        this.winning_team = 'Jak';
       }
 
       // Reorder the teams array based on the draft lottery results
